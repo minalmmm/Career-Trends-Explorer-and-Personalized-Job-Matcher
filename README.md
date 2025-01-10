@@ -1,76 +1,90 @@
-Get the full scoop at [NaturalEarthData.com](http://naturalearthdata.com)
+# Remote Work Trends Forecasting
 
-_No, really! This readme is a poor substitute for the live site._
+This project analyzes and predicts trends related to remote work and job openings, with a focus on the future workforce. Using historical job data and various forecasting models like ARIMA and Prophet, we provide insights into the growth of remote jobs and other workforce patterns.
 
-# About Natural Earth Vector
+## Overview
 
-Natural Earth is a public domain map dataset available at 1:10m, 1:50m, and 1:110 million scales. Featuring tightly integrated vector (here) and raster data ([over there](https://github.com/nvkelso/natural-earth-raster)), with Natural Earth you can make a variety of visually pleasing, well-crafted maps with cartography or GIS software.
+With the growing shift towards remote work, this project aims to:
 
-Natural Earth was built through a collaboration of many [volunteers](http://www.naturalearthdata.com/about/contributors/) and is supported by [NACIS](http://www.nacis.org/) (North American Cartographic Information Society), and is free for use in any type of project (see our [Terms of Use](http://www.naturalearthdata.com/about/terms-of-use/) page for more information).
+1. Forecast future trends in remote jobs.
+2. Identify key factors influencing job openings and salary trends.
+3. Offer recommendations for companies, job seekers, and policymakers.
 
-[Get the Data »](http://www.naturalearthdata.com/downloads)
+## Features
 
-![Convenience](http://www.naturalearthdata.com/wp-content/uploads/2009/08/home_image_11.png)
+- **Data Analysis**: Cleans and processes job data to extract key metrics such as job type, salary, and remote job status.
+- **Forecasting**: Implements ARIMA and Prophet models to predict future job trends based on historical data.
+- **Visualization**: Generates visualizations of historical and predicted trends, helping stakeholders to understand how remote work is evolving.
 
-# Convenience
+## Installation
 
-Natural Earth solves a problem: finding suitable data for making small-scale maps. In a time when the web is awash in geospatial data, cartographers are forced to waste time sifting through confusing tangles of poorly attributed data to make clean, legible maps. Because your time is valuable, Natural Earth data comes ready-to-use.
+To run this project locally, follow these steps:
 
-![Neatness Counts](http://www.naturalearthdata.com/wp-content/uploads/2009/08/home_image_21.png)
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/yourusername/your-repository-name.git
+    ```
 
-# Neatness Counts
+2. Navigate to the project directory:
+    ```bash
+    cd your-repository-name
+    ```
 
-The carefully generalized linework maintains consistent, recognizable geographic shapes at 1:10m, 1:50m, and 1:110m scales. Natural Earth was built from the ground up so you will find that all data layers align precisely with one another. For example, where rivers and country borders are one and the same, the lines are coincident.
+3. Create and activate a Python virtual environment (optional but recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
 
-![GIS Atributes](http://www.naturalearthdata.com/wp-content/uploads/2009/08/home_image_32.png)
+4. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-# GIS Attributes
+## Data
 
-Natural Earth, however, is more than just a collection of pretty lines. The data attributes are equally important for mapmaking. Most data contain embedded feature names, which are ranked by relative importance. Other attributes facilitate faster map production, such as width attributes assigned to river segments for creating tapers.
+The dataset used in this project includes job postings with details like:
 
-# Versioning
+- Job title
+- Salary range
+- Country
+- Job type (e.g., remote, full-time, part-time)
+- Year and month of posting
 
-The 2.0 release in 2012 marked the project's shift from so-called marketing versions to [semantic versioning](http://semver.org/). 
+The data is processed to create aggregated metrics such as:
 
-Natural Earth is a big project with hundreds of files that depend on each other and the total weighs in at several gigabytes. SemVer is a simple set of rules and requirements around version numbers. For our project, the data layout is the API. 
+- Percentage of remote jobs
+- Average salary and hourly rates
+- Job trends over time
 
-* **Version format of X.Y.Z** (Major.Minor.Patch). 
-* **Backwards incompatible** changes, increment the major version X.
-* **Backwards compatible** additions/changes, increment the minor version Y
-* **Bug fixes** not affecting the file and field names, patch version Z will be incremented. 
+## Models Used
 
-Major version increments:
+1. **ARIMA (AutoRegressive Integrated Moving Average)**: A time series forecasting model used to predict future job trends based on historical data.
+2. **Prophet**: A forecasting model developed by Facebook, which is robust to missing data and outliers and is ideal for time series with daily or seasonal patterns.
 
-* Changing existing data **file names**
-* Changing existing data **column (field) names**
-* Removing **`FeatureCla` field attribute values**
-* Additions, deletions to **admin-0**
-* Introduce **significant new themes**
+## How to Run
 
-Minor version increments:
+1. Ensure all dependencies are installed (`pip install -r requirements.txt`).
+2. Run the main script to analyze and forecast trends:
+    ```bash
+    python main.py
+    ```
+3. View the output visualizations and forecast results.
 
-* Any shape or attribute change in **admin-0**
-* Additions, deletions, and any shape or attribute changes in **admin-1**
-* Additions, deletions to **any theme**
-* Major shape or attribute changes in **any theme**
-* Adding, changing **`FeatureCla` field attribute values**
-* Introduce **minor new themes**
+## Visualizations
 
-Patch version increments:
+The project generates various plots, including:
 
-* Minor shape or attribute changes in **any theme**
-* Bug fixes to shape, attributes in **any theme**
+- A plot showing the historical and forecasted trends of remote jobs.
+- A chart forecasting future job openings based on the selected forecasting model.
 
-Under this scheme, version numbers and the way they change convey meaning about the underlying code and what has been modified from one version to the next.
+## Insights and Recommendations
 
-When we introduce a new version of Natural Earth, you can tell by the version number how much effort you will need to extend to integrate the data with your map implementation.
+Based on the model forecasts, key insights and recommendations are provided to help stakeholders adapt to future workforce changes:
 
-* **Bug fixes Z**: can simply use the new data files, replacing your old files.
-* **Minor version Y**: limited integration challenges.
-* **Major version X**: significatnt integration challenges, either around changed file strucutre, field layout, field values like `FeatureCla` used in symbolizing data, or significant new additions or significant changes to existing themes.
-
-# &etc
-
-Natural Earth is maintained by Nathaneiel V. KELSO ([@nvkelso](https://github.com/nvkelso/)) and Tom Patterson.
-
-The project transitioned to Github in 2012. Versioned files are here to collaborate around. The frontend still lives at [NaturalEarthData.com](http://naturalearthdata.com).
+- **For Companies**: Invest in remote work infrastructure and training programs.
+- **For Job Seekers**: Focus on roles in high-demand categories like technology and healthcare.
+- **For Policymakers**: Support upskilling initiatives to prepare the workforce for future demands.
+## Output 
+![Output](https://github.com/minalmmm/Career-Trends-Explorer-and-Personalized-Job-Matcher/blob/main/images/img1.png)
+![Output](https://github.com/minalmmm/Career-Trends-Explorer-and-Personalized-Job-Matcher/blob/main/images/img2.png)
