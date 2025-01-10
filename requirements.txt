@@ -1,0 +1,6 @@
+nbformat>=4.2.0
+plotly
+jupyter
+ipywidgets
+pandas
+numpy

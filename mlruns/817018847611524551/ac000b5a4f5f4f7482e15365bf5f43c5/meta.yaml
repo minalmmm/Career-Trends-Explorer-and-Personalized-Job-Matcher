@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/data%20science%20material/project_8/mlruns/817018847611524551/ac000b5a4f5f4f7482e15365bf5f43c5/artifacts
+end_time: 1736488761741
+entry_point_name: ''
+experiment_id: '817018847611524551'
+lifecycle_stage: active
+run_id: ac000b5a4f5f4f7482e15365bf5f43c5
+run_name: blushing-grub-199
+run_uuid: ac000b5a4f5f4f7482e15365bf5f43c5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736488761425
+status: 3
+tags: []
+user_id: '91860'

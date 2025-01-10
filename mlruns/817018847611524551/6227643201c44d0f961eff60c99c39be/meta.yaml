@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/data%20science%20material/project_8/mlruns/817018847611524551/6227643201c44d0f961eff60c99c39be/artifacts
+end_time: 1736436771857
+entry_point_name: ''
+experiment_id: '817018847611524551'
+lifecycle_stage: active
+run_id: 6227643201c44d0f961eff60c99c39be
+run_name: traveling-quail-742
+run_uuid: 6227643201c44d0f961eff60c99c39be
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1736436771790
+status: 4
+tags: []
+user_id: '91860'
