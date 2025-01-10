@@ -1,4 +1,4 @@
-# Remote Work Trends Forecasting
+# Career-Trends-Explorer-and-Personalized-Job-Matcher
 
 This project analyzes and predicts trends related to remote work and job openings, with a focus on the future workforce. Using historical job data and various forecasting models like ARIMA and Prophet, we provide insights into the growth of remote jobs and other workforce patterns.
 
