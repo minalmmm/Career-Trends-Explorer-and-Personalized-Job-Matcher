@@ -16,31 +16,6 @@ With the growing shift towards remote work, this project aims to:
 - **Forecasting**: Implements ARIMA and Prophet models to predict future job trends based on historical data.
 - **Visualization**: Generates visualizations of historical and predicted trends, helping stakeholders to understand how remote work is evolving.
 
-## Installation
-
-To run this project locally, follow these steps:
-
-1. Clone this repository:
-    ```bash
-    git clone https://github.com/yourusername/your-repository-name.git
-    ```
-
-2. Navigate to the project directory:
-    ```bash
-    cd your-repository-name
-    ```
-
-3. Create and activate a Python virtual environment (optional but recommended):
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-    ```
-
-4. Install the required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
 ## Data
 
 The dataset used in this project includes job postings with details like:
@@ -61,15 +36,6 @@ The data is processed to create aggregated metrics such as:
 
 1. **ARIMA (AutoRegressive Integrated Moving Average)**: A time series forecasting model used to predict future job trends based on historical data.
 2. **Prophet**: A forecasting model developed by Facebook, which is robust to missing data and outliers and is ideal for time series with daily or seasonal patterns.
-
-## How to Run
-
-1. Ensure all dependencies are installed (`pip install -r requirements.txt`).
-2. Run the main script to analyze and forecast trends:
-    ```bash
-    python main.py
-    ```
-3. View the output visualizations and forecast results.
 
 ## Visualizations
 
